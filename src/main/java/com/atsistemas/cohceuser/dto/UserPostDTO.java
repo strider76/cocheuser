@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CarDTO {
-	
-	String model;
+public class UserPostDTO extends UserDTO{
+
+	Integer idUser;
 }

@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CarDTO {
+public class CarPostDTO {
 	
 	String model;
 }
