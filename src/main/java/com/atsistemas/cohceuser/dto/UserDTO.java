@@ -7,8 +7,6 @@ public class UserDTO {
 	String name;
 	
 	List<String> cars;
-	
-	
-	Integer idUser;
+
 
 }
