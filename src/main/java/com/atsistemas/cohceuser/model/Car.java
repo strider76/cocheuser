@@ -24,7 +24,7 @@ public class Car {
 	private Integer idCar;
 	
 	@Column(nullable = false)
-	private String name;
+	private String model;
 	
 	@JoinColumn(name = FIELD_USER)
 	@ManyToOne(fetch = FetchType.LAZY)
