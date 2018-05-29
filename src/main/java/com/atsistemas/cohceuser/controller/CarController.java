@@ -35,6 +35,7 @@ public class CarController {
 		return carMapper.modelToDto(car);
 	}
 	
+	@ResponseBody
 	@GetMapping("/{idCar}")
 	public CarDTO findById(@PathVariable Integer idCar) {
 		final Optional<Car> car = carService.findById(idCar);
@@ -42,6 +43,7 @@ public class CarController {
 	}
 	
 	/************************************HTTP METHOD POST *************************************/
+	@ResponseBody
 	@PostMapping
 	public CarDTO create(@RequestBody CarDTO dto) {
 		final Car car = carService.create(dto);
