@@ -1,4 +1,4 @@
-package com.dbg.quizback.config;
+package com.atsistemas.cohceuser.config;
 
 import org.dozer.DozerBeanMapper;
 import org.springframework.context.annotation.Bean;
