@@ -1,8 +1,13 @@
 package com.atsistemas.cohceuser.dto;
 
-public class CarDTO {
+import java.util.List;
 
-	Integer idCar;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class CarDTO {
 	
 	String model;
 }
