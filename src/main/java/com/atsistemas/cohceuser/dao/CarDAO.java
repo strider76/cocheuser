@@ -14,6 +14,6 @@ public interface CarDAO extends PagingAndSortingRepository<Car, Integer> {
 	Optional<Car> findOneByIdCourse(int id);
 
 	// Nombre
-	Optional<Car> findOneByName(String model);
+	Optional<Car> findOneByModel(String model);
 
 }
