@@ -1,48 +1,43 @@
 package com.atsistemas.cohceuser.service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.atsistemas.cohceuser.dao.CarDAO;
 import com.atsistemas.cohceuser.dto.CarDTO;
 import com.atsistemas.cohceuser.model.Car;
 
 @Service
-public class CarServiceImpl implements CarService{
+public class CarServiceImpl implements CarService {
+
+	@Autowired
+	CarDAO carDao;
+
+	@Autowired
+	//CarMapper carMapper;
 
 	@Override
 	public Car create(CarDTO car) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void update(Integer idCar, CarDTO car) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void delete(Integer idCar) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Car findById(Integer idCar) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<Car> findById(Integer idCar) {
+		return carDao.findById(idCar);
 	}
 
 	@Override
 	public List<Car> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		//return carDao.findAll();
+		return carDao.findAll().stream().collect(Collectors.toList());
 	}
 
 	@Override
 	public List<Car> findAllByUser(Integer idUser) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
